@@ -1,0 +1,24 @@
+[[ "$-" != *i* ]] && return
+
+alias grep='grep --color'
+alias ls='ls -hF --color=tty'
+alias ll='ls -l'
+alias la='ls -A'
+alias node='nodejs'
+
+function parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+NO_COLOR="\[\033[0m\]"
+BLACK="\[\033[0;30m\]"
+RED="\[\033[0;31m\]"
+GREEN="\[\033[0;32m\]"
+YELLOW="\[\033[0;33m\]"
+BLUE="\[\033[0;34m\]"
+PURPLE="\[\033[0;35m\]"
+CYAN="\[\033[0;36m\]"
+WHITE="\[\033[0;37m\]"
+
+export PS1="$GREEN\h $NO_COLOR\w$YELLOW\$(parse_git_branch)$RED \$ $NO_COLOR"
+export CDPATH=".:~:/workspace"
