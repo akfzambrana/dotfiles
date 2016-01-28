@@ -1,14 +1,14 @@
-[[ "$-" != *i* ]] && return
+force_color_prompt=yes
+
+function parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
 
 alias grep='grep --color'
 alias ls='ls -hF --color=tty'
 alias ll='ls -l'
 alias la='ls -A'
 alias node='nodejs'
-
-function parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
 
 NO_COLOR="\[\033[0m\]"
 BLACK="\[\033[0;30m\]"
