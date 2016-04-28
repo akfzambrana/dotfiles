@@ -6,7 +6,7 @@ alias ll='ls -l'                              # long list
 alias la='ls -A'                              # all but . and ..
 alias l='ls -CF'                              #
 
-alias wk='cd /cygdrive/d/front/'			  # my work directory
+alias wk='cd d: && cd front/'		      # my work directory
 
 function parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
