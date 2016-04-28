@@ -22,4 +22,3 @@ WHITE="\[\033[0;37m\]"
 
 export PS1="$GREEN\h $NO_COLOR\w$YELLOW\$(parse_git_branch)$RED \$ $NO_COLOR"
 export CDPATH=".:~:/workspace"
-
