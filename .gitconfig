@@ -27,4 +27,4 @@
     ft = fetch -p
 
 [push]
-    default = simple
+    default = current 
