@@ -21,6 +21,7 @@ alias grep="grep --color"
 alias ls="ls -hF --color=tty"
 alias ll="ls -l"
 alias la="ls -A"
+alias bower="./node_modules/bower/bin/bower"
 
 NO_COLOR="\[\033[0m\]"
 BLACK="\[\033[0;30m\]"
@@ -36,3 +37,6 @@ LIGHTYELLOW="\[\033[0;93m\]"
 
 export PS1="$LIGHTGREEN\h $NO_COLOR\w$LIGHTYELLOW\$(parse_git_branch)$RED \$ $NO_COLOR"
 export CDPATH=".:~:~/workspace:/workspace"
+
+export NVM_DIR="/home/andrea/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
