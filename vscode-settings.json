@@ -18,12 +18,13 @@
         "**/.settings": true,
         "**/bin": true
     },
-    "editor.rulers": [80],
+    "editor.rulers": [120],
     "editor.renderIndentGuides": true,
     "files.trimTrailingWhitespace": true,
     "editor.fontSize": 16,
     "editor.renderWhitespace": "all" ,
-    "window.openFilesInNewWindow": false,
     "editor.detectIndentation": false,
-    "editor.tabCompletion": true
+    "editor.tabCompletion": true,
+    "window.openFilesInNewWindow": false,
+    "window.showFullPath": true
 }
