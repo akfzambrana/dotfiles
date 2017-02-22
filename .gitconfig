@@ -27,4 +27,7 @@
     ft = fetch -p
 
 [push]
-    default = current 
+    default = current
+
+[merge]
+	tool = meld
