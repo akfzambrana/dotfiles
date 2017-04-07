@@ -6,7 +6,12 @@ Linux (vagrant box)
 gitconfig (Everywhere)
 
 ## Creating symlinks to this dotfiles
-### VScode
+### Bash
+```console 
+ln -s <path of the file>/dotfiles/.bashrc-<OS name> ~/.bashrc  
+```
+
+### Git
 ```console 
 ln -s <path of the file>/dotfiles/.gitconfig ~/.gitconfig  
 ```
