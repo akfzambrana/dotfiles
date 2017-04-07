@@ -7,5 +7,12 @@ gitconfig (Everywhere)
 
 ## Creating symlinks to this dotfiles
 ### VScode
+```console 
+ln -s <path of the file>/dotfiles/.gitconfig ~/.gitconfig  
+```
+
+### VScode
+```console 
 ln -s <path of the file>/dotfiles/vscode-settings.json ~/.config/Code/User/settings.json  
 ln -s <path of the file>/dotfiles/vscode-keybindings.json ~/.config/Code/User/keybindings.json  
+```

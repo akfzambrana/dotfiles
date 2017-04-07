@@ -18,7 +18,7 @@
         "**/.settings": true,
         "**/bin": true
     },
-    "editor.rulers": [120],
+    "editor.rulers": [80],
     "editor.renderIndentGuides": true,
     "files.trimTrailingWhitespace": true,
     "editor.fontSize": 16,
@@ -26,5 +26,6 @@
     "editor.detectIndentation": false,
     "editor.tabCompletion": true,
     "window.openFilesInNewWindow": false,
-    "window.showFullPath": true
+    "window.showFullPath": true,
+    "workbench.iconTheme": "vs-seti"
 }

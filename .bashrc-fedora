@@ -36,8 +36,8 @@ CYAN="\[\033[0;36m\]"
 WHITE="\[\033[0;37m\]"
 LIGHTYELLOW="\[\033[0;93m\]"
 
-export PS1="$LIGHTGREEN\h $NO_COLOR\w$LIGHTYELLOW\$(parse_git_branch)$RED \$ $NO_COLOR"
+export PS1="[$LIGHTGREEN\h$NO_COLOR] \w$LIGHTYELLOW\$(parse_git_branch)$RED \$ $NO_COLOR"
 export CDPATH=".:~:~/workspace:/workspace"
 
-export NVM_DIR="/home/andrea/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
