@@ -9,9 +9,7 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-
-#Ubuntu custom settings
-#force_color_prompt=yes
+force_color_prompt=yes
 
 function parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'

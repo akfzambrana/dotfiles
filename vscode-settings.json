@@ -27,5 +27,6 @@
     "editor.tabCompletion": true,
     "window.openFilesInNewWindow": false,
     "window.showFullPath": true,
-    "workbench.iconTheme": "vs-seti"
+    "workbench.iconTheme": "vs-seti",
+    "workbench.welcome.enabled": false
 }
