@@ -1,15 +1,33 @@
 // Place your key bindings in this file to overwrite the defaults
 [
-    { "key": "ctrl+shift+down",
+    {
+        "key": "ctrl+shift+down",
         "command": "editor.action.copyLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly" },
-    { "key": "ctrl+shift+up",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+up",
         "command": "editor.action.copyLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly" },
-    { "key": "ctrl+k l",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+k l",
         "command": "editor.action.transformToLowercase",
-        "when": "editorTextFocus && !editorReadonly" },
-    { "key": "ctrl+k u",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+k u",
         "command": "editor.action.transformToUppercase",
-        "when": "editorTextFocus && !editorReadonly" }
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+;",
+        "command": "editor.action.addCommentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+;",
+        "command": "editor.action.removeCommentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    }
 ]
