@@ -1,4 +1,3 @@
-// Place your settings in this file to overwrite the default settings
 {
     "files.exclude": {
         "**/.git": true,
@@ -27,6 +26,11 @@
     "editor.tabCompletion": true,
     "window.openFilesInNewWindow": false,
     "window.showFullPath": true,
-    "workbench.iconTheme": "vs-seti",
-    "workbench.welcome.enabled": false
+    "workbench.iconTheme": "simple-icons",
+    "workbench.welcome.enabled": false,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "window.zoomLevel": 0,
+    "terminal.integrated.fontSize": 16,
+    "editor.minimap.enabled": false,
+    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}"
 }
