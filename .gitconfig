@@ -26,11 +26,16 @@
     update = !sh -c \"git fetch && git rebase origin/$(git symbolic-ref HEAD | sed -e 's,.*/\\(.*\\),\\1,')\"
     ft = fetch -p
 
+[pull]
+    ff = yes
+
 [push]
     default = current
 
 [merge]
     tool = meld
+    commit = no
+    ff = no
 
 [mergetool "meld"]
     cmd = meld --auto-merge \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output \"$MERGED\" --label \"MERGE (REMOTE BASE MY)\"
@@ -42,3 +47,6 @@
 
     # don't create backup *.orig files
     keepBackup = false
+
+[diff]
+    tool = meld
