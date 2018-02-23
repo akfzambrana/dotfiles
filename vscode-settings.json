@@ -17,20 +17,35 @@
         "**/.settings": true,
         "**/bin": true
     },
-    "editor.rulers": [80],
+    "editor.rulers": [
+        80
+    ],
+    "files.trimTrailingWhitespace": true,
     "editor.renderIndentGuides": true,
-    "files.trimTrailingWhitespace": false,
     "editor.fontSize": 16,
-    "editor.renderWhitespace": "all" ,
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "all",
     "editor.detectIndentation": false,
     "editor.tabCompletion": true,
+    "editor.minimap.enabled": false,
     "window.openFilesInNewWindow": false,
     "window.showFullPath": true,
+    "window.zoomLevel": 0,
+    "window.title": "${dirty}${folderName}${separator}${activeEditorMedium}",
     "workbench.iconTheme": "simple-icons",
     "workbench.welcome.enabled": false,
     "workbench.colorTheme": "Visual Studio Dark",
-    "window.zoomLevel": 0,
+    "workbench.startupEditor": "none",
+    "workbench.panel.location": "right",
     "terminal.integrated.fontSize": 16,
-    "editor.minimap.enabled": false,
-    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}"
+    "merge-conflict.codeLens.enabled": false,
+    "merge-conflict.decorators.enabled": false,
+    "explorer.confirmDragAndDrop": false,
+    "html.format.endWithNewline": true,
+    "[json]": {
+        "editor.tabSize": 4
+    },
+    "[markdown]": {
+        "files.trimTrailingWhitespace": false
+    }
 }
