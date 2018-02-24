@@ -17,9 +17,11 @@
         "**/.settings": true,
         "**/bin": true
     },
-    "editor.rulers": [
-        80
-    ],
+    "search.exclude": {
+      "**/dist": true,
+      "**/node_modules": true,
+    },
+    "editor.rulers": [80],
     "files.trimTrailingWhitespace": true,
     "editor.renderIndentGuides": true,
     "editor.fontSize": 16,

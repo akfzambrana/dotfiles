@@ -15,13 +15,6 @@ function parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-alias grep="grep --color"
-alias ls="ls -hF --color=tty"
-alias ll="ls -l"
-alias la="ls -A"
-alias bower="./node_modules/bower/bin/bower"
-alias gulp="./node_modules/gulp/bin/gulp.js"
-
 NO_COLOR="\[\033[0m\]"
 BLACK="\[\033[0;30m\]"
 RED="\[\033[0;31m\]"
@@ -41,3 +34,11 @@ export CDPATH=".:~:~/workspace:/workspace"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+alias grep="grep --color"
+alias ls="ls -hF --color=tty"
+alias ll="ls -l"
+alias la="ls -A"
+alias bower="./node_modules/bower/bin/bower"
+alias gulp="./node_modules/gulp/bin/gulp.js"
+alias stremio="~/Downloads/Stremio3.6.5.linux/Stremio.sh"
