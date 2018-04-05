@@ -20,10 +20,10 @@
 [alias]
     st = status
     ci = commit
-    br = branch
+    br = branch -a
     co = checkout
     lg = log -p
-    update = !sh -c \"git fetch && git rebase origin/$(git symbolic-ref HEAD | sed -e 's,.*/\\(.*\\),\\1,')\"
+    update = !sh -c \"git fetch -p && git rebase origin/$(git symbolic-ref HEAD | sed -e 's,.*/\\(.*\\),\\1,')\"
     ft = fetch -p
 
 [pull]

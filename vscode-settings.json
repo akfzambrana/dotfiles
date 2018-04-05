@@ -4,12 +4,12 @@
         "**/.svn": true,
         "**/.hg": true,
         "**/.DS_Store": true,
-        "**/node_modules": true,
+        "**/node_modules": false,
         "**/bower_components": true,
         "**/.tmp": true,
         "**/.sass-cache": true,
         "**/.vscode": true,
-        "**/dist": true,
+        "**/dist": false,
         "**/grunt_plugins": true,
         "**/target": true,
         "**/project": true,
@@ -24,7 +24,7 @@
     "editor.rulers": [80],
     "files.trimTrailingWhitespace": true,
     "editor.renderIndentGuides": true,
-    "editor.fontSize":14,
+    "editor.fontSize":15,
     "editor.tabSize": 2,
     "editor.renderWhitespace": "all",
     "editor.detectIndentation": false,
@@ -35,7 +35,7 @@
     "workbench.iconTheme": "simple-icons",
     "workbench.colorTheme": "Visual Studio Dark",
     "workbench.startupEditor": "none",
-    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.fontSize": 13,
     "merge-conflict.codeLens.enabled": false,
     "merge-conflict.decorators.enabled": false,
     "explorer.confirmDragAndDrop": false,
@@ -46,6 +46,5 @@
     "[markdown]": {
         "files.trimTrailingWhitespace": false
     },
-    "window.zoomLevel": 0.5,
     "editor.autoIndent": false
   }
