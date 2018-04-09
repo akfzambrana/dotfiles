@@ -23,7 +23,7 @@
     br = branch -a
     co = checkout
     lg = log -p
-    update = !sh -c \"git fetch -p && git rebase origin/$(git symbolic-ref HEAD | sed -e 's,.*/\\(.*\\),\\1,')\"
+    up = !sh -c \"git fetch -p && git rebase origin/$(git symbolic-ref HEAD | sed -e 's,.*/\\(.*\\),\\1,')\"
     ft = fetch -p
 
 [pull]
