@@ -11,26 +11,86 @@ fi
 # User specific aliases and functions
 force_color_prompt=yes
 
-function parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+NO_COLOR="\[\033[0m\]"
+
+RED="\[\033[0;31m\]"
+BOLD_RED="\[\033[01;31m\]"
+LIGHT_RED="\[\033[0;91m\]"
+LIGHT_BOLD_RED="\[\033[01;91m\]"
+
+GREEN="\[\033[0;32m\]"
+BOLD_GREEN="\[\033[01;32m\]"
+LIGHT_GREEN="\[\033[0;92m\]"
+LIGHT_BOLD_GREEN="\[\033[01;92m\]"
+
+YELLOW="\[\033[00;33m\]"
+BOLD_YELLOW="\[\033[01;33m\]"
+LIGHT_YELLOW="\[\033[0;93m\]"
+LIGHT_BOLD_YELLOW="\[\033[01;93m\]"
+
+BLUE="\[\033[00;34m\]"
+BOLD_BLUE="\[\033[01;34m\]"
+LIGHT_BLUE="\[\033[0;94m\]"
+LIGHT_BOLD_BLUE="\[\033[01;94m\]"
+
+MAGENTA="\[\033[0;35m\]"
+BOLD_MAGENTA="\[\033[01;35m\]"
+LIGHT_MAGENTA="\[\033[0;95m\]"
+LIGHT_BOLD_MAGENTA="\[\033[01;95m\]"
+
+CYAN="\[\033[0;36m\]"
+BOLD_CYAN="\[\033[01;36m\]"
+LIGHT_CYAN="\[\033[0;96m\]"
+LIGHTCBOLD_YAN="\[\033[011;96m\]"
+
+LIGHT_GRAY="\[\033[0;37m\]"
+BOLD_LIGHT_GRAY="\[\033[01;37m\]"
+
+function get_package_version() {
+  if [[ -f package.json ]]
+  then
+    cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[",\t ]//g'
+  fi
 }
 
-NO_COLOR="\[\033[0m\]"
-BLACK="\[\033[0;30m\]"
-RED="\[\033[0;31m\]"
-GREEN="\[\033[0;32m\]"
-YELLOW="\[\033[0;33m\]"
-BLUE="\[\033[0;34m\]"
-MAGENTA="\[\033[0;35m\]"
-CYAN="\[\033[0;36m\]"
-WHITE="\[\033[0;37m\]"
-LIGHTRED="\[\033[0;91m\]"
-LIGHTGREEN="\[\033[0;92m\]"
-LIGHTYELLOW="\[\033[0;93m\]"
-LIGHTBLUE="\[\033[0;94m\]"
-LIGHTMAGENTA="\[\033[0;95m\]"
+function color_my_prompt {
+  local __user_and_host="$BOLD_GREEN\h" # \u@\h
+  local __cur_location="$NO_COLOR\W"  # capital 'W': current directory, small 'w': full file path
+  local __git_branch_color="$GREEN"
+  local __prompt_tail="$BOLD_RED$"
+  local __user_input_color="$NO_COLOR"
+  local __git_branch='$(__git_ps1)';
+  local __package='$(get_package_version)';
 
-export PS1="[$LIGHTGREEN\h$NO_COLOR] \w$LIGHTYELLOW\$(parse_git_branch)$RED \$ $NO_COLOR"
+  # colour branch name depending on state
+  if [[ "$(__git_ps1)" =~ "*" ]]; then     # if repository is dirty
+      __git_branch_color="$BOLD_RED"
+  elif [[ "$(__git_ps1)" =~ "$" ]]; then   # if there is something stashed
+      __git_branch_color="$LIGHT_YELLOW"
+  elif [[ "$(__git_ps1)" =~ "%" ]]; then   # if there are only untracked files
+      __git_branch_color="$BOLD_GRAY"
+  elif [[ "$(__git_ps1)" =~ "+" ]]; then   # if there are staged files
+      __git_branch_color="$BOLD_CYAN"
+  fi
+
+  # Build the PS1 (Prompt String)
+  PS1="$__user_and_host $__cur_location$__git_branch_color$__git_branch$LIGHT_CYAN$__package $__prompt_tail$__user_input_color "
+}
+
+# configure PROMPT_COMMAND which is executed each time before PS1
+export PROMPT_COMMAND=color_my_prompt
+
+# if .git-prompt.sh exists, set options and execute it
+if [ -f ~/.git-prompt.sh ]; then
+  GIT_PS1_SHOWDIRTYSTATE=true
+  GIT_PS1_SHOWSTASHSTATE=true
+  GIT_PS1_SHOWUNTRACKEDFILES=true
+  GIT_PS1_SHOWUPSTREAM="auto"
+  GIT_PS1_HIDE_IF_PWD_IGNORED=true
+  GIT_PS1_SHOWCOLORHINTS=true
+  . ~/.git-prompt.sh
+fi
+
 # Terminal colors for white background
 # export PS1="[$RED\h$NO_COLOR] \w$BLUE\$(parse_git_branch)$RED \$ $NO_COLOR"
 export CDPATH=".:~:~/workspace:/workspace"
@@ -41,10 +101,11 @@ export NVM_DIR="$HOME/.nvm"
 alias grep="grep --color"
 alias ls="ls -hF --color=tty"
 alias ll="ls -l"
-alias la="ls -A"
+alias la="ls -la"
 alias bower="./node_modules/bower/bin/bower"
 alias gulp="./node_modules/gulp/bin/gulp.js"
 alias stremio="~/Downloads/Stremio3.6.5.linux/Stremio.sh"
+alias ff31="~/Documentos/firefox-31.0/firefox"
 
 # Via
 alias carrinho="cd ~/workspace/vv/vv-jornada-carrinho-ngx"
@@ -60,4 +121,7 @@ alias crm="cd ~/workspace/vv/vv-jornada-crm-ngx"
 alias gestaopedidos="cd ~/workspace/vv/vv-jornada-gestao-pedidos-ngx"
 alias listacasamento="cd ~/workspace/vv/vv-jornada-lista-casamento-ngx"
 
-alias configuser="git config user.name \"ANDREA KELLEY F ZAMBRANA\" && git config user.name andrea.zambrana@viavarejo.com.br"
+alias configuser="git config user.name \"ANDREA KELLEY F ZAMBRANA\" && git config user.email andrea.zambrana@viavarejo.com.br"
+alias tiranpmvv="mv ~/.npmrc ~/.npmrc-vv"
+alias botanpmvv="mv ~/.npmrc-vv ~/.npmrc"
+alias lkcorecss="rm -rf ./node_modules/vv-jornada-core-css/dist && ln -s ~/workspace/vv/vv-jornada-core-css/src ./node_modules/vv-jornada-core-css/dist"
