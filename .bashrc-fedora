@@ -56,7 +56,7 @@ function get_package_version() {
 function color_my_prompt {
   local __user_and_host="$BOLD_GREEN\h" # \u@\h
   local __cur_location="$NO_COLOR\W"  # capital 'W': current directory, small 'w': full file path
-  local __git_branch_color="$GREEN"
+  local __git_branch_color="$BOLD_GREEN"
   local __prompt_tail="$BOLD_RED$"
   local __user_input_color="$NO_COLOR"
   local __git_branch='$(__git_ps1)';
@@ -125,3 +125,5 @@ alias configuser="git config user.name \"ANDREA KELLEY F ZAMBRANA\" && git confi
 alias tiranpmvv="mv ~/.npmrc ~/.npmrc-vv"
 alias botanpmvv="mv ~/.npmrc-vv ~/.npmrc"
 alias lkcorecss="rm -rf ./node_modules/vv-jornada-core-css/dist && ln -s ~/workspace/vv/vv-jornada-core-css/src ./node_modules/vv-jornada-core-css/dist"
+alias lkcorengx="rm -rf ./node_modules/vv-jornada-core-ngx/dist && ln -s ~/workspace/vv/vv-jornada-core-ngx/dist ./node_modules/vv-jornada-core-ngx/dist"
+alias buildcorengx="npm run build:package-lnx"
