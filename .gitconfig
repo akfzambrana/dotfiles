@@ -50,3 +50,6 @@
 
 [diff]
     tool = meld
+[user]
+	name = Andréa Zambrana
+	email = zambrana.akf@gmail.com

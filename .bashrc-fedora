@@ -98,6 +98,9 @@ export CDPATH=".:~:~/workspace:/workspace"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
+eval $(keychain --eval id_rsa)
+eval $(keychain --eval id_rsa_personal)
+
 alias grep="grep --color"
 alias ls="ls -hF --color=tty"
 alias ll="ls -l"
