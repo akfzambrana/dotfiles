@@ -47,5 +47,9 @@
         "files.trimTrailingWhitespace": false
     },
     "editor.autoIndent": false,
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "explorer.confirmDelete": false,
+    "files.associations": {
+      ".bashrc-fedora": "shellscript"
+    }
   }

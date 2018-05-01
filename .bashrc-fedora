@@ -90,11 +90,18 @@ if [ -f ~/.git-prompt.sh ]; then
   . ~/.git-prompt.sh
 fi
 
-if ps -p $SSH_AGENT_PID > /dev/null
-  then
+if ps -p $SSH_AGENT_PID > /dev/null; then
     echo -e "ssh-agent is already running!"
   else
     eval `ssh-agent -s`
+fi
+
+if [ -f ~/workspace/work-settings ]; then
+  . ~/workspace/work-settings/.work-bash.sh
+else
+  cd ~/workspace
+  git clone git@bitbucket.org:akfzambrana/work-settings.git
+  . ~/workspace/work-settings/.work-bash.sh
 fi
 
 # Terminal colors for white background
