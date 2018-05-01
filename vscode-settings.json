@@ -33,7 +33,7 @@
     "window.openFilesInNewWindow": "off",
     "window.title": "${dirty}${folderName}${separator}${activeEditorMedium}",
     "workbench.iconTheme": "simple-icons",
-    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.colorTheme": "Monokai",
     "workbench.startupEditor": "none",
     "terminal.integrated.fontSize": 13,
     "merge-conflict.codeLens.enabled": false,
@@ -46,5 +46,6 @@
     "[markdown]": {
         "files.trimTrailingWhitespace": false
     },
-    "editor.autoIndent": false
+    "editor.autoIndent": false,
+    "window.zoomLevel": 0
   }
