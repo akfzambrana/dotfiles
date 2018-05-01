@@ -57,10 +57,9 @@ function color_my_prompt {
   local __user_and_host="$BOLD_GREEN\h" # \u@\h
   local __cur_location="$NO_COLOR\W"  # capital 'W': current directory, small 'w': full file path
   local __git_branch_color="$BOLD_GREEN"
-  local __prompt_tail="$BOLD_RED$"
+  local __prompt_tail="$CYAN$"
   local __user_input_color="$NO_COLOR"
   local __git_branch='$(__git_ps1)';
-  local __package='$(get_package_version)';
 
   # colour branch name depending on state
   if [[ "$(__git_ps1)" =~ "*" ]]; then     # if repository is dirty
@@ -74,7 +73,7 @@ function color_my_prompt {
   fi
 
   # Build the PS1 (Prompt String)
-  PS1="$__user_and_host $__cur_location$__git_branch_color$__git_branch$LIGHT_CYAN$__package $__prompt_tail$__user_input_color "
+  PS1="$__user_and_host $__cur_location$__git_branch_color$__git_branch$__prompt_tail$__user_input_color "
 }
 
 # configure PROMPT_COMMAND which is executed each time before PS1
@@ -91,15 +90,19 @@ if [ -f ~/.git-prompt.sh ]; then
   . ~/.git-prompt.sh
 fi
 
+if ps -p $SSH_AGENT_PID > /dev/null
+  then
+    echo -e "ssh-agent is already running!"
+  else
+    eval `ssh-agent -s`
+fi
+
 # Terminal colors for white background
 # export PS1="[$RED\h$NO_COLOR] \w$BLUE\$(parse_git_branch)$RED \$ $NO_COLOR"
 export CDPATH=".:~:~/workspace:/workspace"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-eval $(keychain --eval id_rsa)
-eval $(keychain --eval id_rsa_personal)
 
 alias grep="grep --color"
 alias ls="ls -hF --color=tty"
@@ -109,24 +112,3 @@ alias bower="./node_modules/bower/bin/bower"
 alias gulp="./node_modules/gulp/bin/gulp.js"
 alias stremio="~/Downloads/Stremio3.6.5.linux/Stremio.sh"
 alias ff31="~/Documentos/firefox-31.0/firefox"
-
-# Via
-alias carrinho="cd ~/workspace/vv/vv-jornada-carrinho-ngx"
-alias assets="cd ~/workspace/vv/vv-jornada-assets"
-alias catalogo="cd ~/workspace/vv/vv-jornada-catalogo-ngx"
-alias corecss="cd ~/workspace/vv/vv-jornada-core-css"
-alias corengx="cd ~/workspace/vv/vv-jornada-core-ngx"
-alias home="cd ~/workspace/vv/vv-jornada-home-ngx"
-alias atendimento="cd ~/workspace/vv/vv-jornada-atendimento-ngx"
-alias catalogoservicos="cd ~/workspace/vv/vv-jornada-catalogo-servicos-ngx"
-alias crediario="cd ~/workspace/vv/vv-jornada-crediario-ngx"
-alias crm="cd ~/workspace/vv/vv-jornada-crm-ngx"
-alias gestaopedidos="cd ~/workspace/vv/vv-jornada-gestao-pedidos-ngx"
-alias listacasamento="cd ~/workspace/vv/vv-jornada-lista-casamento-ngx"
-
-alias configuser="git config user.name \"ANDREA KELLEY F ZAMBRANA\" && git config user.email andrea.zambrana@viavarejo.com.br"
-alias tiranpmvv="mv ~/.npmrc ~/.npmrc-vv"
-alias botanpmvv="mv ~/.npmrc-vv ~/.npmrc"
-alias lkcorecss="rm -rf ./node_modules/vv-jornada-core-css/dist && ln -s ~/workspace/vv/vv-jornada-core-css/src ./node_modules/vv-jornada-core-css/dist"
-alias lkcorengx="rm -rf ./node_modules/vv-jornada-core-ngx/dist && ln -s ~/workspace/vv/vv-jornada-core-ngx/dist ./node_modules/vv-jornada-core-ngx/dist"
-alias buildcorengx="npm run build:package-lnx"
