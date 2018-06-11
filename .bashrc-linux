@@ -96,12 +96,13 @@ if ps -p $SSH_AGENT_PID > /dev/null; then
     eval `ssh-agent -s`
 fi
 
-if [ -f ~/workspace/work-settings ]; then
-  . ~/workspace/work-settings/.work-bash.sh
+if [ -f ~/.work-bash.sh ]; then
+  . ~/.work-bash.sh
 else
   cd ~/workspace
   git clone git@bitbucket.org:akfzambrana/work-settings.git
-  . ~/workspace/work-settings/.work-bash.sh
+  ln -s ~/workspace/work-settings/.work-bash.sh ~/.work-bash.sh
+  . ~/.work-bash.sh
 fi
 
 # Terminal colors for white background
