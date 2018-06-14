@@ -51,5 +51,8 @@
     "explorer.confirmDelete": false,
     "files.associations": {
       ".bashrc-fedora": "shellscript"
+    },
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
     }
   }

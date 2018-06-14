@@ -1,52 +1,55 @@
 [color]
-    ui = auto
+  ui = auto
 
 [color "branch"]
-    current = yellow reverse
-    local = yellow
-    remote = green
+  current = yellow reverse
+  local = yellow
+  remote = green
 
 [color "diff"]
-    meta = yellow bold
-    frag = magenta bold
-    old = red bold
-    new = green bold
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
 
 [color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
+  added = yellow
+  changed = green
+  untracked = cyan
 
 [alias]
-    st = status
-    ci = commit
-    br = branch -a
-    co = checkout
-    lg = log -p
-    up = !sh -c \"git fetch -p && git rebase origin/$(git symbolic-ref HEAD | sed -e 's,.*/\\(.*\\),\\1,')\"
-    ft = fetch -p
+  st = status
+  ci = commit
+  br = branch -a
+  co = checkout
+  lg = log -p
+  up = !sh -c \"git fetch -p && git rebase origin/$(git symbolic-ref HEAD | sed -e 's,.*/\\(.*\\),\\1,')\"
+  ft = fetch -p
 
 [pull]
-    ff = yes
+  ff = yes
 
 [push]
-    default = current
+  default = current
 
 [merge]
-    tool = meld
-    commit = no
-    ff = no
+  tool = meld
+  commit = no
+  ff = no
 
 [mergetool "meld"]
-    cmd = meld --auto-merge \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output \"$MERGED\" --label \"MERGE (REMOTE BASE MY)\"
-    trustExitCode = false
+  cmd = meld --auto-merge \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output \"$MERGED\" --label \"MERGE (REMOTE BASE MY)\"
+  trustExitCode = false
 
 [mergetool]
-    # don't ask if we want to skip merge
-    prompt = false
+  # don't ask if we want to skip merge
+  prompt = false
 
-    # don't create backup *.orig files
-    keepBackup = false
+  # don't create backup *.orig files
+  keepBackup = false
 
 [diff]
-    tool = meld
+  tool = meld
+
+[core]
+  editor = vim

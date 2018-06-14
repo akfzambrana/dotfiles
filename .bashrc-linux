@@ -109,9 +109,6 @@ fi
 # export PS1="[$RED\h$NO_COLOR] \w$BLUE\$(parse_git_branch)$RED \$ $NO_COLOR"
 export CDPATH=".:~:~/workspace:/workspace"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
 alias grep="grep --color"
 alias ls="ls -hF --color=tty"
 alias ll="ls -l"
@@ -120,3 +117,7 @@ alias bower="./node_modules/bower/bin/bower"
 alias gulp="./node_modules/gulp/bin/gulp.js"
 alias stremio="~/Downloads/Stremio3.6.5.linux/Stremio.sh"
 alias ff31="~/Documentos/firefox-31.0/firefox"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
