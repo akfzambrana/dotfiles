@@ -32,5 +32,15 @@
     {
       "key": "ctrl+k s",
       "command": "workbench.action.files.saveAll"
+    },
+    {
+      "key": "ctrl+;",
+      "command": "editor.action.quickFix",
+      "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+      "key": "ctrl+.",
+      "command": "-editor.action.quickFix",
+      "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
     }
   ]
