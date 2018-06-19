@@ -115,7 +115,6 @@ alias ll="ls -l"
 alias la="ls -la"
 alias bower="./node_modules/bower/bin/bower"
 alias gulp="./node_modules/gulp/bin/gulp.js"
-alias stremio="~/Downloads/Stremio3.6.5.linux/Stremio.sh"
 alias ff31="~/Documentos/firefox-31.0/firefox"
 
 export NVM_DIR="$HOME/.nvm"
