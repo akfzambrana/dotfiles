@@ -34,7 +34,7 @@
     "workbench.iconTheme": "simple-icons",
     "workbench.colorTheme": "Monokai",
     "workbench.startupEditor": "none",
-    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.fontSize": 12,
     "merge-conflict.codeLens.enabled": false,
     "merge-conflict.decorators.enabled": false,
     "explorer.confirmDragAndDrop": false,
@@ -53,5 +53,5 @@
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
     },
-    "window.zoomLevel": 0.3
+    "window.zoomLevel": 0.35
   }

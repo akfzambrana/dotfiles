@@ -5,6 +5,14 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+# enable bash completion in interactive shells
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
@@ -54,7 +62,8 @@ function get_package_version() {
 }
 
 function color_my_prompt {
-  local __user_and_host="$BOLD_GREEN\h" # \u@\h
+  local __user_and_host="$BOLD_MAGENTA\h" # \u@\h
+  # local __user_and_host="$BOLD_RED\h" # \u@\h
   local __cur_location="$NO_COLOR\W"  # capital 'W': current directory, small 'w': full file path
   local __git_branch_color="$BOLD_GREEN"
   local __prompt_tail="$CYAN$"
