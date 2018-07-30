@@ -32,7 +32,6 @@
     "window.openFilesInNewWindow": "off",
     "window.title": "${dirty}${folderName}${separator}${activeEditorMedium}",
     "workbench.iconTheme": "simple-icons",
-    "workbench.colorTheme": "Monokai",
     "workbench.startupEditor": "none",
     "terminal.integrated.fontSize": 12,
     "merge-conflict.codeLens.enabled": false,
@@ -50,8 +49,9 @@
     "files.associations": {
       ".bashrc-fedora": "shellscript"
     },
+    "window.zoomLevel": 0.35,
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
+      "source.organizeImports": false
     },
-    "window.zoomLevel": 0.35
+    "workbench.colorTheme": "Monokai"
   }

@@ -20,27 +20,11 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+.",
-        "command": "editor.action.addCommentLine",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+.",
-        "command": "editor.action.removeCommentLine",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
       "key": "ctrl+k s",
       "command": "workbench.action.files.saveAll"
     },
     {
-      "key": "ctrl+;",
-      "command": "editor.action.quickFix",
-      "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
-    },
-    {
-      "key": "ctrl+.",
-      "command": "-editor.action.quickFix",
-      "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+      "key": "shift+alt+s",
+      "command": "todo.toggleTimer"
     }
   ]
