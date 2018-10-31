@@ -71,8 +71,7 @@
     "explorer.confirmDelete": false,
     "window.openFilesInNewWindow": "off",
     "window.title": "${dirty}${folderName}${separator}${activeEditorMedium}",
-    "window.zoomLevel": 0,
-    "terminal.integrated.fontSize": 12,
+    "window.zoomLevel": 0.35,
     "workbench.iconTheme": "simple-icons",
     "workbench.startupEditor": "none",
     "workbench.colorTheme": "Monokai"
