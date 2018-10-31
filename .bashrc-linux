@@ -49,7 +49,7 @@ LIGHT_BOLD_MAGENTA="\[\033[01;95m\]"
 CYAN="\[\033[0;36m\]"
 BOLD_CYAN="\[\033[01;36m\]"
 LIGHT_CYAN="\[\033[0;96m\]"
-LIGHTCBOLD_YAN="\[\033[011;96m\]"
+LIGHT_BOLD_CYAN="\[\033[011;96m\]"
 
 LIGHT_GRAY="\[\033[0;37m\]"
 BOLD_LIGHT_GRAY="\[\033[01;37m\]"
@@ -72,13 +72,13 @@ function color_my_prompt {
 
   # colour branch name depending on state
   if [[ "$(__git_ps1)" =~ "*" ]]; then     # if repository is dirty
-      __git_branch_color="$BOLD_RED"
+      __git_branch_color="$LIGHT_RED"
   elif [[ "$(__git_ps1)" =~ "$" ]]; then   # if there is something stashed
       __git_branch_color="$LIGHT_YELLOW"
   elif [[ "$(__git_ps1)" =~ "%" ]]; then   # if there are only untracked files
-      __git_branch_color="$BOLD_GRAY"
+      __git_branch_color="$LIGHT_CYAN"
   elif [[ "$(__git_ps1)" =~ "+" ]]; then   # if there are staged files
-      __git_branch_color="$BOLD_CYAN"
+      __git_branch_color="$BOLD_LIGHT_GRAY"
   fi
 
   # Build the PS1 (Prompt String)
@@ -124,7 +124,7 @@ alias ls="ls -hF --color=tty"
 alias ll="ls -l"
 alias la="ls -la"
 alias bower="./node_modules/bower/bin/bower"
-alias gulp="./node_modules/gulp/bin/gulp.js"
+# alias gulp="./node_modules/gulp/bin/gulp.js"
 alias ff31="/opt/firefox-31.0/firefox"
 
 export NVM_DIR="$HOME/.nvm"
