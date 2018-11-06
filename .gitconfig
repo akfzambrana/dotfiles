@@ -25,6 +25,7 @@
   lg = log -p
   up = !sh -c \"git fetch -p && git rebase origin/$(git symbolic-ref HEAD | sed -e 's,.*/\\(.*\\),\\1,')\"
   ft = fetch -p
+  cb = "!f() { git checkout --quiet master && git branch --merged | grep --invert-match '\\*' | xargs -n 1 git branch --delete; git checkout --quiet @{-1}; }; f"
 
 [pull]
   ff = yes
@@ -53,3 +54,6 @@
 
 [core]
   editor = vim
+
+[url "https://"]
+  insteadOf = git://
