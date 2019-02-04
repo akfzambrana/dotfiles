@@ -127,6 +127,7 @@ alias bower="./node_modules/bower/bin/bower"
 # alias gulp="./node_modules/gulp/bin/gulp.js"
 alias ff31="/opt/firefox-31.0/firefox"
 alias clbr="git branch --merged | grep -Ev '(^\*|master)' | xargs git branch -d"
+alias renewip="sudo dhclient -r"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
