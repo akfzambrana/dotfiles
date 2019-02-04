@@ -1,78 +1,69 @@
 {
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/.DS_Store": true,
-        "**/node_modules": false,
-        "**/bower_components": true,
-        "**/.tmp": true,
-        "**/.sass-cache": true,
-        "**/.vscode": true,
-        "**/dist": false,
-        "**/grunt_plugins": true,
-        "**/target": true,
-        "**/project": true,
-        "**/sql": true,
-        "**/.settings": true,
-        "**/bin": true
-    },
-    "search.exclude": {
-        "**/dist": true,
-        "**/node_modules": true
-    },
-    "editor.detectIndentation": false,
-    "editor.tabSize": 2,
-    "editor.formatOnSave": true,
-    "editor.renderIndentGuides": true,
-    "editor.renderWhitespace": "all",
-    "editor.tabCompletion": true,
-    "editor.minimap.enabled": false,
-    "editor.autoIndent": false,
-    "editor.rulers": [
-        120
-    ],
-    "editor.codeActionsOnSave": {
-        "source.organizeImports": true
-    },
-    "files.trimTrailingWhitespace": true,
-    "files.associations": {
-        ".bashrc-fedora": "shellscript"
-    },
-    "html.format.wrapLineLength": 120,
-    "html.format.endWithNewline": true,
-    "html.format.wrapAttributes": "force-expand-multiline",
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "[typescript]": {
-        "editor.tabSize": 2
-    },
-    "[javascript]": {
-        "editor.tabSize": 2
-    },
-    "[html]": {
-        "editor.tabSize": 2
-    },
-    "[scss]": {
-        "editor.tabSize": 2
-    },
-    "[css]": {
-        "editor.tabSize": 2
-    },
-    "[json]": {
-        "editor.tabSize": 4
-    },
-    "[markdown]": {
-        "files.trimTrailingWhitespace": false
-    },
-    "merge-conflict.codeLens.enabled": false,
-    "merge-conflict.decorators.enabled": false,
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    "window.openFilesInNewWindow": "off",
-    "window.title": "${dirty}${folderName}${separator}${activeEditorMedium}",
-    "window.zoomLevel": 0.35,
-    "workbench.iconTheme": "simple-icons",
-    "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Monokai"
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/bower_components": true,
+    "**/.tmp": true,
+    "**/.sass-cache": true,
+    "**/.vscode": true,
+    "**/dist": false,
+    "**/grunt_plugins": true,
+    "**/target": true,
+    "**/project": true,
+    "**/sql": true,
+    "**/.settings": true,
+    "**/bin": true
+  },
+  "search.exclude": {
+    "**/dist": true,
+    "**/node_modules": true
+  },
+  "editor.autoIndent": false,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+  "editor.renderIndentGuides": true,
+  "editor.renderWhitespace": "all",
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": false,
+  "editor.rulers": [
+    120
+  ],
+  "files.trimTrailingWhitespace": true,
+  "html.autoClosingTags": false,
+  "html.format.endWithNewline": true,
+  "html.format.wrapLineLength": 120,
+  "html.format.wrapAttributes": "force-expand-multiline",
+  "[typescript]": {
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.tabSize": 2
+  },
+  "[html]": {
+    "editor.tabSize": 2
+  },
+  "[css]": {
+    "editor.tabSize": 2
+  },
+  "[scss]": {
+    "editor.tabSize": 2
+  },
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "merge-conflict.codeLens.enabled": false,
+  "merge-conflict.decorators.enabled": false,
+  "window.title": "${dirty}${folderName}${separator}${activeEditorMedium}",
+  "window.zoomLevel": 0.35,
+  "workbench.iconTheme": "simple-icons",
+  "workbench.startupEditor": "none",
+  "workbench.colorTheme": "Monokai"
 }
