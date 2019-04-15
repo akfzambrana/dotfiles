@@ -62,7 +62,7 @@ function get_package_version() {
 }
 
 function color_my_prompt {
-  local __user_and_host="$BOLD_MAGENTA\h" # \u@\h
+  local __user_and_host="$BOLD_MAGENTA\u" # \u@\h
   # local __user_and_host="$BOLD_RED\h" # \u@\h
   local __cur_location="$NO_COLOR\W"  # capital 'W': current directory, small 'w': full file path
   local __git_branch_color="$BOLD_GREEN"
@@ -105,27 +105,25 @@ if ps -p $SSH_AGENT_PID > /dev/null; then
     eval `ssh-agent -s`
 fi
 
-if [ -f ~/.work-bash.sh ]; then
-  . ~/.work-bash.sh
-else
-  cd ~/workspace
-  git clone git@bitbucket.org:akfzambrana/work-settings.git
-  ln -s ~/workspace/work-settings/.work-bash.sh ~/.work-bash.sh
-  . ~/.work-bash.sh
-fi
+# if [ -f ~/.work-bash.sh ]; then
+#   . ~/.work-bash.sh
+# else
+#   cd ~/workspace
+#   git clone git@bitbucket.org:akfzambrana/work-settings.git
+#   ln -s ~/workspace/work-settings/.work-bash.sh ~/.work-bash.sh
+#   . ~/.work-bash.sh
+# fi
 
 # Terminal colors for white background
 # export PS1="[$RED\h$NO_COLOR] \w$BLUE\$(parse_git_branch)$RED \$ $NO_COLOR"
 export CDPATH=".:~:~/workspace:/workspace"
 export PATH=~/bin:$PATH
 
+
 alias grep="grep --color"
 alias ls="ls -hF --color=tty"
 alias ll="ls -l"
 alias la="ls -la"
-alias bower="./node_modules/bower/bin/bower"
-# alias gulp="./node_modules/gulp/bin/gulp.js"
-alias ff31="/opt/firefox-31.0/firefox"
 alias clbr="git branch --merged | grep -Ev '(^\*|master)' | xargs git branch -d"
 alias renewip="sudo dhclient -r"
 

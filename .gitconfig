@@ -55,5 +55,6 @@
 [core]
   editor = vim
 
-[url "https://"]
-  insteadOf = git://
+[user]
+	email = zambrana.akf@gmail.com
+	name = Andréa Zambrana
