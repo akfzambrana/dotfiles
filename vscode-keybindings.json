@@ -18,5 +18,13 @@
     "key": "ctrl+k u",
     "command": "editor.action.transformToUppercase",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+k shift+5",
+    "command": "workbench.action.splitEditorRight"
+  },
+  {
+    "key": "ctrl+k shift+'",
+    "command": "workbench.action.splitEditorDown"
   }
 ]
