@@ -60,10 +60,12 @@
     "merge-conflict.codeLens.enabled": false,
     "merge-conflict.decorators.enabled": false,
     "window.title": "${dirty}${folderName}${separator}${activeEditorMedium}",
-    "window.zoomLevel": 0.4,
+    "window.zoomLevel": 0,
     "workbench.iconTheme": "simple-icons",
     "workbench.startupEditor": "none",
     "workbench.colorTheme": "Monokai",
     "prettier.singleQuote": true,
-    "javascript.updateImportsOnFileMove.enabled": "always"
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.fontSize": 13,
+    "eslint.autoFixOnSave": true
 }
