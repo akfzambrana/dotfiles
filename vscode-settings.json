@@ -30,7 +30,9 @@
     "editor.renderWhitespace": "all",
     "editor.tabSize": 2,
     "editor.minimap.enabled": false,
-    "editor.rulers": [120],
+    "editor.rulers": [
+        120
+    ],
     "files.trimTrailingWhitespace": true,
     "html.autoClosingTags": false,
     "html.format.endWithNewline": true,
@@ -60,7 +62,7 @@
     "merge-conflict.codeLens.enabled": false,
     "merge-conflict.decorators.enabled": false,
     "window.title": "${dirty}${folderName}${separator}${activeEditorMedium}",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 0.4,
     "workbench.iconTheme": "simple-icons",
     "workbench.startupEditor": "none",
     "workbench.colorTheme": "Monokai",

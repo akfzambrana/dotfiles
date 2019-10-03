@@ -116,8 +116,8 @@ fi
 
 # Terminal colors for white background
 # export PS1="[$RED\h$NO_COLOR] \w$BLUE\$(parse_git_branch)$RED \$ $NO_COLOR"
-export CDPATH=".:~:~/workspace:/workspace"
-export PATH=~/bin:$PATH
+export CDPATH=".:~:~/workspace:/workspace:~/loggi/"
+export PATH=~/bin:/opt/loggi/ops/ansible/bin:$PATH
 
 
 alias grep="grep --color"
