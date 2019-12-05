@@ -99,20 +99,20 @@ if [ -f ~/.git-prompt.sh ]; then
   . ~/.git-prompt.sh
 fi
 
-if ps -p $SSH_AGENT_PID > /dev/null; then
-    echo -e "ssh-agent is already running!"
-  else
-    eval `ssh-agent -s`
-fi
-
-# if [ -f ~/.work-bash.sh ]; then
-#   . ~/.work-bash.sh
-# else
-#   cd ~/workspace
-#   git clone git@bitbucket.org:akfzambrana/work-settings.git
-#   ln -s ~/workspace/work-settings/.work-bash.sh ~/.work-bash.sh
-#   . ~/.work-bash.sh
+# if ps -p $SSH_AGENT_PID > /dev/null; then
+#     echo -e "ssh-agent is already running!"
+#   else
+#     eval `ssh-agent -s`
 # fi
+
+if [ -f ~/.work-bash.sh ]; then
+  . ~/.work-bash.sh
+else
+  cd ~/workspace
+  git clone git@bitbucket.org:akfzambrana/work-settings.git
+  ln -s ~/workspace/work-settings/.work-bash.sh ~/.work-bash.sh
+  . ~/.work-bash.sh
+fi
 
 # Terminal colors for white background
 # export PS1="[$RED\h$NO_COLOR] \w$BLUE\$(parse_git_branch)$RED \$ $NO_COLOR"
@@ -126,7 +126,12 @@ alias ll="ls -l"
 alias la="ls -la"
 alias clbr="git branch --merged | grep -Ev '(^\*|master)' | xargs git branch -d"
 alias renewip="sudo dhclient -r"
+alias dockerstop="docker container stop $(docker container ls -aq)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/andrea/.sdkman"
+[[ -s "/home/andrea/.sdkman/bin/sdkman-init.sh" ]] && source "/home/andrea/.sdkman/bin/sdkman-init.sh"
