@@ -71,5 +71,6 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.fontSize": 13,
   "eslint.autoFixOnSave": true,
-  "extensions.ignoreRecommendations": true
+  "extensions.ignoreRecommendations": true,
+  "explorer.confirmDragAndDrop": false
 }
