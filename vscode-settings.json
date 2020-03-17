@@ -20,13 +20,12 @@
     "**/dist": true,
     "**/node_modules": true
   },
-  "editor.autoIndent": false,
+  "editor.autoIndent": "none",
   "editor.codeActionsOnSave": {
     "source.organizeImports": true,
     "source.fixAll.eslint": true
   },
   "editor.detectIndentation": false,
-  "editor.formatOnSave": true,
   "editor.renderIndentGuides": true,
   "editor.renderWhitespace": "all",
   "editor.tabSize": 2,
@@ -34,7 +33,6 @@
   "editor.rulers": [
     120
   ],
-  "files.trimTrailingWhitespace": true,
   "html.autoClosingTags": false,
   "html.format.endWithNewline": true,
   "html.format.wrapLineLength": 120,
@@ -64,13 +62,14 @@
   "merge-conflict.decorators.enabled": false,
   "window.title": "${dirty}${folderName}${separator}${activeEditorMedium}",
   "window.zoomLevel": 0.5,
-  "workbench.iconTheme": "simple-icons",
   "workbench.startupEditor": "none",
   "workbench.colorTheme": "Monokai",
   "prettier.singleQuote": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.fontSize": 13,
-  "eslint.autoFixOnSave": true,
   "extensions.ignoreRecommendations": true,
-  "explorer.confirmDragAndDrop": false
+  "explorer.confirmDragAndDrop": false,
+  "editor.formatOnSave": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.trimAutoWhitespace": true
 }
