@@ -34,13 +34,10 @@
   default = current
 
 [merge]
-  tool = meld
+  # tool = meld
+  tool = vscode
   commit = no
   ff = no
-
-[mergetool "meld"]
-  cmd = meld --auto-merge \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output \"$MERGED\" --label \"MERGE (REMOTE BASE MY)\"
-  trustExitCode = false
 
 [mergetool]
   # don't ask if we want to skip merge
@@ -49,8 +46,25 @@
   # don't create backup *.orig files
   keepBackup = false
 
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
+
+# [mergetool "meld"]
+  # linux
+  # cmd = meld --auto-merge \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output \"$MERGED\" --label \"MERGE (REMOTE BASE MY)\"
+  # trustExitCode = false
+
+  # mac
+  # cmd = open -W -a Meld --args --auto-merge \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output \"$MERGED\" --label \"MERGE (REMOTE BASE MY)\"
+  # trustExitCode = true
+
+
 [diff]
-  tool = meld
+  tool = vscode
+
+[difftool "vscode"]
+  cmd = code --wait --diff
 
 [core]
-  editor = vim
+  editor = code --wait
+  # editor = vim

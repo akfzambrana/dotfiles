@@ -22,7 +22,7 @@
   },
   "editor.autoIndent": "none",
   "editor.codeActionsOnSave": {
-    "source.organizeImports": true,
+    "source.organizeImports": false,
     "source.fixAll.eslint": true
   },
   "editor.detectIndentation": false,
@@ -34,42 +34,21 @@
     120
   ],
   "html.autoClosingTags": false,
-  "html.format.endWithNewline": true,
-  "html.format.wrapLineLength": 120,
   "html.format.wrapAttributes": "force-expand-multiline",
-  "[typescript]": {
-    "editor.tabSize": 2
-  },
-  "[javascript]": {
-    "editor.tabSize": 2
-  },
-  "[json]": {
-    "editor.tabSize": 4
-  },
-  "[html]": {
-    "editor.tabSize": 2
-  },
-  "[css]": {
-    "editor.tabSize": 2
-  },
-  "[scss]": {
-    "editor.tabSize": 2
-  },
   "[markdown]": {
     "files.trimTrailingWhitespace": false
   },
-  "merge-conflict.codeLens.enabled": false,
-  "merge-conflict.decorators.enabled": false,
   "window.title": "${dirty}${folderName}${separator}${activeEditorMedium}",
-  "window.zoomLevel": 0.5,
+  "window.zoomLevel": 1,
   "workbench.startupEditor": "none",
   "workbench.colorTheme": "Monokai",
-  "prettier.singleQuote": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "editor.fontSize": 13,
+  "editor.fontSize": 12,
   "extensions.ignoreRecommendations": true,
   "explorer.confirmDragAndDrop": false,
-  "editor.formatOnSave": true,
   "diffEditor.ignoreTrimWhitespace": false,
-  "editor.trimAutoWhitespace": true
+  "editor.trimAutoWhitespace": true,
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  "workbench.iconTheme": "material-icon-theme"
 }
