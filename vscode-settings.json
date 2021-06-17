@@ -41,7 +41,7 @@
   "window.title": "${dirty}${folderName}${separator}${activeEditorMedium}",
   "window.zoomLevel": 1,
   "workbench.startupEditor": "none",
-  "workbench.colorTheme": "Monokai",
+  "workbench.colorTheme": "Visual Studio Dark",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.fontSize": 12,
   "extensions.ignoreRecommendations": true,
