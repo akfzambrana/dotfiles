@@ -5,19 +5,22 @@ Cygwin (windows terminal)
 Linux (vagrant box)
 gitconfig (Everywhere)
 
-## Creating symlinks to this dotfiles
-### Bash
+## Add the config to local environment
+
+Copy the line below into the `.bashrc` file
+
 ```console 
-ln -s <path of the file>/dotfiles/.bashrc-<OS name> ~/.bashrc  
+. ~/workspace/dotfiles/bash-config.sh  
 ```
 
-### Git
+### Create symlinks
+
 ```console 
-ln -s <path of the file>/dotfiles/.gitconfig ~/.gitconfig  
+ln -s workspace/dotfiles/.gitconfig ~/.gitconfig  
 ```
 
 ### VScode
 ```console 
-ln -s <path of the file>/dotfiles/vscode-settings.json ~/.config/Code/User/settings.json  
-ln -s <path of the file>/dotfiles/vscode-keybindings.json ~/.config/Code/User/keybindings.json  
+ln -s workspace/dotfiles/vscode-settings.json ~/.config/Code/User/settings.json  
+ln -s workspace/dotfiles/vscode-keybindings.json ~/.config/Code/User/keybindings.json  
 ```

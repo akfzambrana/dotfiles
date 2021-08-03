@@ -1,24 +1,3 @@
-# .bashrc
-
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
-
-# enable bash completion in interactive shells
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
-
-# User specific aliases and functions
-force_color_prompt=yes
-
 NO_COLOR="\[\033[0m\]"
 
 RED="\[\033[0;31m\]"
@@ -99,39 +78,5 @@ if [ -f ~/.git-prompt.sh ]; then
   . ~/.git-prompt.sh
 fi
 
-# if ps -p $SSH_AGENT_PID > /dev/null; then
-#     echo -e "ssh-agent is already running!"
-#   else
-#     eval `ssh-agent -s`
-# fi
-
-if [ -f ~/.work-bash.sh ]; then
-  . ~/.work-bash.sh
-else
-  cd ~/workspace
-  git clone git@bitbucket.org:akfzambrana/work-settings.git
-  ln -s ~/workspace/work-settings/.work-bash.sh ~/.work-bash.sh
-  . ~/.work-bash.sh
-fi
-
-# Terminal colors for white background
-# export PS1="[$RED\h$NO_COLOR] \w$BLUE\$(parse_git_branch)$RED \$ $NO_COLOR"
-export CDPATH=".:~:~/workspace:/workspace:~/loggi/"
-export PATH=~/bin:/opt/loggi/ops/ansible/bin:$PATH
-
-
-alias grep="grep --color"
-alias ls="ls -hF --color=tty"
-alias ll="ls -l"
-alias la="ls -la"
-alias clbr="git branch --merged | grep -Ev '(^\*|master)' | xargs git branch -d"
-alias renewip="sudo dhclient -r"
-alias dockerstop="docker container stop $(docker container ls -aq)"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/andrea/.sdkman"
-[[ -s "/home/andrea/.sdkman/bin/sdkman-init.sh" ]] && source "/home/andrea/.sdkman/bin/sdkman-init.sh"
+export CDPATH=".:~:~/workspace:/workspace"
+export PATH=~/bin:$PATH
