@@ -18,9 +18,3 @@ Copy the line below into the `.bashrc` file
 ```console 
 ln -s workspace/dotfiles/.gitconfig ~/.gitconfig  
 ```
-
-### VScode
-```console 
-ln -s workspace/dotfiles/vscode-settings.json ~/.config/Code/User/settings.json  
-ln -s workspace/dotfiles/vscode-keybindings.json ~/.config/Code/User/keybindings.json  
-```
