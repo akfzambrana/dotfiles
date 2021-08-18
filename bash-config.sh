@@ -41,7 +41,7 @@ function get_package_version() {
 }
 
 function color_my_prompt {
-  local __user_and_host="$BOLD_MAGENTA\u" # \u@\h
+  local __user_and_host="$LIGHT_BOLD_MAGENTA\u" # \u@\h
   # local __user_and_host="$BOLD_RED\h" # \u@\h
   local __cur_location="$NO_COLOR\W"  # capital 'W': current directory, small 'w': full file path
   local __git_branch_color="$BOLD_GREEN"
@@ -76,6 +76,11 @@ if [ -f ~/.git-prompt.sh ]; then
   GIT_PS1_HIDE_IF_PWD_IGNORED=true
   GIT_PS1_SHOWCOLORHINTS=true
   . ~/.git-prompt.sh
+fi
+
+# if tmux exists, set as default terminal
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
 fi
 
 export CDPATH=".:~:~/workspace:/workspace"

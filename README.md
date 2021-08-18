@@ -13,8 +13,12 @@ Copy the line below into the `.bashrc` file
 . ~/workspace/dotfiles/bash-config.sh  
 ```
 
-### Create symlinks
+## Add github config symlink
 
 ```console 
-ln -s workspace/dotfiles/.gitconfig ~/.gitconfig  
+ln -s ~/workspace/dotfiles/.gitconfig ~/.gitconfig
 ```
+
+## Loved tools
+
+- Tmux: `apt-get install tmux`
