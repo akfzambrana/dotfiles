@@ -22,3 +22,4 @@ ln -s ~/workspace/dotfiles/.gitconfig ~/.gitconfig
 ## Loved tools
 
 - Tmux: `apt-get install tmux`
+- Meld: `apt-get install meld`
