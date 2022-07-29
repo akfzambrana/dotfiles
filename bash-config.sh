@@ -1,3 +1,5 @@
+#!/bin/bash
+
 NO_COLOR="\[\033[0m\]"
 
 RED="\[\033[0;31m\]"
@@ -38,6 +40,12 @@ function get_package_version() {
   then
     cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[",\t ]//g'
   fi
+}
+
+function remove_bluetooth_devices() {
+  for device in $(bluetoothctl devices  | grep -o "[[:xdigit:]:]\{8,17\}"); do
+      echo "removing bluetooth device: $device | $(bluetoothctl remove $device)"
+  done
 }
 
 function color_my_prompt {
