@@ -21,5 +21,14 @@ ln -s ~/workspace/dotfiles/.gitconfig ~/.gitconfig
 
 ## Loved tools
 
+### Linux
+
 - Tmux: `apt install tmux`
 - Meld: `apt install meld`
+
+### Mac
+
+Requirements: Homebrew
+
+- Tmux: `brew install tmux`
+- Meld: `brew install --cask meld`
